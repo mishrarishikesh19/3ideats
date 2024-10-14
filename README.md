@@ -1,4 +1,4 @@
-# 3ideats
+#3ideats
 
 # 1) Write a python program to calculate area of triangle and circle and print the result. Take input from user.
 
@@ -268,6 +268,48 @@ for i in range(15):
   print(i)
 
 '''
+
+#15. Explain any 5 math function in python with example. 
+'''
+1> abs(): Absolute Value  
+The abs() function returns the absolute value of a number.
+Ex :                                                              '''
+x = 5
+y = abs(x)
+print(y)  # Output: 5
+'''
+2> pow(): Power 
+The pow() function returns the value of a number raised to a power.
+Ex :                                                                 ''' 
+x = 10 
+y = pow(x,2)
+print(y)
+'''
+3> round(): Rounding 
+The round() function returns the rounded value of a number.
+Ex :                                                             '''
+x = 3.14674523
+y = round(x,3) 
+print(y)
+'''
+4> max(): Maximum Value
+The max() function returns the maximum value from a list of numbers.
+Ex :
+'''
+list = [1,2,3,4,5,6,7,8,9,10]
+x = max(list)
+print(x)
+
+'''
+5> math.sqrt(): Square Root
+The math.sqrt() function returns the square root of a number.
+Ex:                                                            
+'''
+import math
+x = 10000
+y = math.sqrt(x)
+print(y)
+'''
 #16. Explain the use if in and not in operator in with suitable program
 '''
 1. in Operator: The in operator returns True if the value is found in the sequence, and False otherwise.
@@ -275,13 +317,13 @@ for i in range(15):
 Example:
 
 fruits = ['apple', 'banana', 'cherry']
-    if 'apple' in fruits:
+if 'apple' in fruits:
         print("Apple is in the list")
-        else:
-            print("Apple is not in the list")
+else:
+        print("Apple is not in the list")
             # Output: Apple is in the list
 
-
+'''
 2. not in Operator:
 
 The not in operator returns True if the value is not found in the sequence, and False otherwise.
@@ -291,7 +333,7 @@ Example:
 fruits = ['apple', 'banana', 'cherry']
 if 'orange' not in fruits:
     print("Orange is not in the list")
-    else:
+else:
         print("Orange is in the list") 
         # Output: Orange is not in the list
 '''
@@ -302,7 +344,7 @@ str1 = "Rishi"
 result = str1.lower()
 print(result)
 
-str2 = "Rishi , kumar, mishra "
+str2 = "Rishi , kesh, mishra "
 result = str2.split(",") 
 print(result)
 
@@ -325,7 +367,7 @@ print(digit)   # False
 
 
 # 20. Explain any 10 string function with example. 
-'''
+
 str1 = "rishi"
 result = str1.lower()
 print(result)
@@ -366,12 +408,12 @@ print(result)  # Output: True
 str10 = "hello world"
 result = str10.endswith("world")
 print(result)  # Output: True
-
 '''
+
 #21. Write a Python program to find those numbers which are divisible by 7 and multiples of 5, between 1500 and 2700 (both included)
 '''
 # Initialize an empty list to store the numbers
-
+'''
 numbers = []
 
 # Iterate over the range from 1500 to 2700 (both included)
@@ -386,22 +428,25 @@ print("Numbers between 1500 and 2700 that are divisible by 7 and multiples of 5:
 print(numbers)
 
 '''
+#33. Write a Python program to convert temperatures to and from Celsius and Fahrenheit.
 
-#23. Write a Python program to guess a number between 1 and 9.
 '''
-Note: User is prompted to enter a guess. If the user guesses wrong then the prompt appears again until the guess is correct, on successful guess, user will get a "Well guessed!" message, and the program will exit.
+#convert Celsius To Fahrenheit
 
-import random
-guess = None
-num = 0
+def convertCelsiusToFahrenheit (celsius):
+    Fahrenheit = (9/5 Celsius) + 32
+    print(f"Formula:=> ({Celsius}°C * 9/5) + 32 = {Fahrenheit}°F ") 
+    print("Celsius To Fahrenheit")
+    Celsius = 35
+convertCelsiusToFahrenheit(Celsius)
 
-while guess != num:
-num random.randint(1,9)
-guess = int(input("Guess the number between 1 to 9:-"))
+# convert Fahrenheit to Celsius
 
-if guess == num:
-print("Well guessed!")
- else:
-print("Wrong guess! Try again")
+def convert FahrenheitToCelsius (Fahrenheit):
+    Celsius = (Fahrenheit- 32)* 5/9
+    print(f"Formula:=> ({Fahrenheit} °F - 32)* 5/9 = {Celsius}°C")
+    print("Fahrenheit to Celsius")
+    Fahrenheit = 95
+convert FahrenheitToCelsius (Fahrenheit)
 
 '''
