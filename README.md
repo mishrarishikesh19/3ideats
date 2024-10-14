@@ -268,7 +268,23 @@ for i in range(15):
   print(i)
 
 '''
+# 14. Write a short program to demonstrate the use of parameterized functions.
 
+'''
+# Function to calculate the area of a rectangle
+
+def calculate_area(length, width):
+    area = length * width
+    return area
+
+# Calling the function with parameters
+length = 5
+width = 3
+result = calculate_area(length, width)
+
+print(f"The area of the rectangle is: {result}")
+
+'''
 #15. Explain any 5 math function in python with example. 
 '''
 1> abs(): Absolute Value  
@@ -336,6 +352,30 @@ if 'orange' not in fruits:
 else:
         print("Orange is in the list") 
         # Output: Orange is not in the list
+'''
+
+#17. What are fruitful function and void functions in python
+
+'''
+1. Fruitful Functions
+A fruitful function is a function that returns a value after performing some task. The value is typically the result of some computation or operation that the function was designed to perform. This value can be assigned to a variable or used directly.
+
+Example:
+def add(a, b):
+    return a + b  # This function returns the sum of a and b
+
+result = add(3, 4)  # result will store the value 7
+print(result)  # Output: 7
+
+2. Void Functions
+A void function is a function that does not return a value. Instead like printing to the screen, modifying a global variable, or  Void functions implicitly return None.
+
+Example:
+def greet(name):
+    print(f"Hello, {name}!")  # This function just prints a message but does not return anything
+
+greet("Alice")  # Output: Hello, Alice!
+
 '''
 
 # 19. Explain the lower(), Split(), find(), len(), isdigit() function with example .
@@ -449,4 +489,64 @@ def convert FahrenheitToCelsius (Fahrenheit):
     Fahrenheit = 95
 convert FahrenheitToCelsius (Fahrenheit)
 
+'''
+
+'''
+34. Write a Python program to guess a number between 1 and 9.
+Note : User is prompted to enter a guess. If the user guesses wrong then the prompt
+appears again until the guess is correct, on successful guess, user will get a "Well
+guessed!" message, and the program will exit.
+
+#Example:
+
+import random
+
+# Randomly select a number between 1 and 9
+number_to_guess = random.randint(1, 9)
+
+while True:
+    guess = int(input("Guess a number between 1 and 9: "))
+    if guess == number_to_guess:
+        print("Well guessed!")
+        break
+'''
+
+#35. Write a Python program that accepts a string and calculates the number of digits and letters
+'''
+Example:
+s = input("Enter a string: ")
+letters = sum(c.isalpha() for c in s)
+digits = sum(c.isdigit() for c in s)
+print("Letters:", letters)
+print("Digits:", digits)
+
+Explain:
+input(): Prompts the user to enter a string.
+sum(c.isalpha() for c in s): Counts the number of alphabetic characters in the string.
+sum(c.isdigit() for c in s): Counts the number of digit characters in the string.
+print(): Displays the counts of letters and digits.
+
+'''
+
+#36. Write a Python program that checks whether a string represents an integer or not
+'''
+Example:
+def is_integer(s):
+    try:
+        int(s)  # Try to convert the string to an integer
+        return True
+    except ValueError:
+        return False
+
+# Accept input from the user
+user_input = input("Enter a string: ")
+
+if is_integer(user_input):
+    print("The string represents an integer.")
+else:
+    print("The string does not represent an integer.")
+ 
+Explain:
+1. The function is_integer attempts to convert the string s to an integer using int().
+2. If successful, it returns True, otherwise it catches the ValueError exception and returns False.
 '''
